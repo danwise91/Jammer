@@ -1,0 +1,21 @@
+<h1>Log In</h1>
+
+<%= form_for(@user, url: login_path) do |f| %>
+<div class="email">
+  <div style="width: 250px">
+    <%= f.text_field :email, class: 'form-control', autofocus: true, placeholder: "Your email"%><br>
+  </div>
+</div>
+
+<div class="password">
+  <div style="width 250px">
+    <%= f.password_field :password, class: 'form-control', autofocus: true, placeholder: "Make between 8-15 characters"%><br>
+  </div>
+</div>
+
+
+
+<div class="actions">
+  <%= f.submit "Submit", class: "btn btn-primary", style: "width: 300px"%>
+</div>
+<%end%>

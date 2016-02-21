@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160221030923) do
+ActiveRecord::Schema.define(version: 20160221210108) do
 
   create_table "bands", force: :cascade do |t|
     t.string   "name"
@@ -25,24 +25,17 @@ ActiveRecord::Schema.define(version: 20160221030923) do
     t.integer "member_id"
   end
 
-  create_table "soundclouds", force: :cascade do |t|
-    t.string   "client_id"
-    t.string   "client_secret"
-    t.string   "redirect_uri"
-    t.string   "response_type"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
     t.string   "password_digest"
     t.integer  "user_id"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
     t.string   "email"
     t.string   "client_id"
+    t.integer  "soundcloud_user_id"
+    t.string   "soundcloud_access_token"
   end
 
 end

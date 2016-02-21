@@ -9,4 +9,5 @@ post 'login', to: "sessions#create"
 delete 'logout', to: 'sessions#destroy'
 # resources :sessions
 resources :users
+resources :bands 
 end

@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+gem 'figaro'
 gem 'bcrypt', '~> 3.1', '>= 3.1.10'
 
 gem 'soundcloud'

@@ -1,5 +1,10 @@
-<a href="/users/new">Sign up</a>
+<!-- <a href="/users/new">Sign up</a>
 <a href="/login">Log In</a>
-<%= link_to "Sign in with Soundcloud", soundcloud_connect_path %>
+<%= link_to "Sign in with Soundcloud", soundcloud_connect_path %> -->
+<% if current_user %>
+    <%= render :partial => 'logged_in' %>
+<% else %>
+    <%= render :partial => 'logged_out' %>
+<% end %>
 
-<h1>Welcome to Jammer</h1>
+<!-- <h1>Welcome to Jammer</h1> -->

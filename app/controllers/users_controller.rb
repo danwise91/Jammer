@@ -6,8 +6,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    #finding the instance of an existing user so use find
   end
+    #finding the instance of an existing user so use find
   #add band variable for user show page
   # @band = Band.new
 
@@ -18,33 +18,20 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      flash[:success] = "Rock On"
       redirect_to @user
-      #handles a successful save
-
-      # session[:user_id] = @user.id
-      # redirect_to root_path
-      # flash[:success] = "Welcome"
     else
     render 'new'
-  end
-end
-
-  def edit
+    end
   end
 
-  def update
-  end
-
-  def destroy
-  end
 
   private
   def user_params
     params.require(:user).permit(:name, :id, :email, :password, :password_confirmation)
   end
 
+end
   # def band_params
   #   params.require(:band).permit(:name)
   # end
-
-end

@@ -1,4 +1,5 @@
-welcome
+<h1>Welcome <%=@user.name.capitalize%></h1>
+
 <head>
 <script type="text/javascript" src="scripts/soundcloud.player.api.js"></script>
 <script type="text/javascript">
@@ -9,6 +10,8 @@ welcome
 </head>
 
 <h3>Bio</h3>
+<%=@user.name.capitalize%>'s email: <%=@user.email%><br>
+Description of <%=@user.name%>: <%=@user.description%>
 
 <h3>Instruments</h3>
 
@@ -26,5 +29,8 @@ welcome
 
 
 <p>your bands</p>
-<div style="height: 120px;width:120px; border:1px solid#ccc;font:16px/26px Georgia, Serif;overflow:auto;"> All the bands </div>
+<div style="height: 120px;width:120px; border:1px solid#ccc;font:16px/26px Georgia, Serif;overflow:auto;">
+
+ </div>
+
 <a href="/bands/new">Register a new band</a>

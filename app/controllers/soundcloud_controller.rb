@@ -26,7 +26,7 @@ end
   sign_in_user = User.where(:soundcloud_user_id => soundcloud_user["id"])
 #create user sessions
   session[:user_id] = sign_in_user.first.id
-  redirect_to root_url, notice: "Signed in!"
+  redirect_to root_path, notice: "Signed in!"
 end
 
 
@@ -34,4 +34,18 @@ end
     session[:user_id]=nil
     redirect_to root_url, notice: "Logged Out"
   end
+
+  def create_client
+    client = SoundCloud.new(:client_id => ENV["SOUNDCLOUD_CLIENT_ID"])
+  end
+
+  def get_tracks
+    track_url = 'http://soundcloud.com/forss/flickermood'
+    embed_info = client.get('/oembed', :url => track_url)
+  end 
+
+  def widget_html
+    puts embed_info['html']
+  end
+
 end

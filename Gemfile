@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+
+gem 'omniauth', '~> 1.3', '>= 1.3.1'
 gem 'figaro'
 gem 'bcrypt', '~> 3.1', '>= 3.1.10'
 

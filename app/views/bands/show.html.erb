@@ -1,9 +1,7 @@
-<h1>Your Bands</h1>
-
-<p>
-  Name: <%= @band.name %><br>
-</p>
-
-<p>
-Members: <%= @band.band_members %>
-</p>
+<h1>Congrats on your new band!</h1>
+<h1><%= @band.name %></h1>
+<h3><%= @band.genre%></h3>
+<h3><%= @band.group_members%></h3>
+<h3><%= @band.description%></h3>
+<h3><%= @band.shows%></h3>
+<%=link_to "Back", users_path %>

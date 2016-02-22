@@ -8,8 +8,7 @@ class SoundcloudController < ApplicationController
 
   # redirect user to authorize URL
   redirect_to client.authorize_url(:grant_type => 'authorization_code', :scope => 'non-expiring', :display => 'popup')
-      end
-  end
+end
 
  def connected
   # create client object with app credentials
@@ -35,3 +34,4 @@ end
     session[:user_id]=nil
     redirect_to root_url, notice: "Logged Out"
   end
+end

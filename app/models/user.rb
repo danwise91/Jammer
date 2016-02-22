@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
 end
 
 def self.create_from_soundcloud(access_token)
+
   create! do |user|
     user.soundcloud_user_id = soundcloud_user["id"]
     user.soundcloud_access_token = access_token["access_token"]

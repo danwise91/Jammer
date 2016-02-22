@@ -1,0 +1,31 @@
+<h1>Register Your Band</h1>
+
+<%= form_for @bands do |f| %>
+<p>
+<%= f.label :name %><br>
+<%= f.text_field :name %>
+</p>
+
+<p>
+  <%= f.label :band_members %><br>
+  <%= f.text_field :band_members %>
+</p>
+
+<p>
+  <%= f.label :genre %><br>
+  <%= f.text_field :genre %>
+</p>
+
+<p>
+  <%= f.label :description%><br>
+  <%= f.text_field :description%>
+</p>
+
+<p>
+  <%= f.label :shows %><br>
+  <%= f.text_field :shows%>
+</p>
+<p>
+  <%= f.submit %>
+</p>
+<%end%>

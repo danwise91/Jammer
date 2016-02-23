@@ -25,6 +25,7 @@ end
 end
   sign_in_user = User.where(:soundcloud_user_id => soundcloud_user["id"])
 #create user sessions
+#changed user_id to id 
   session[:id] = sign_in_user.first.id
   redirect_to root_path, notice: "Signed in!"
 end

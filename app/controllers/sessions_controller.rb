@@ -25,7 +25,7 @@ class SessionsController < ApplicationController
     #   redirect_to root_path
     # else
       flash[:danger] = "Bad username or password"
-      # render :new
+      render :new
     end
   end
 

@@ -32,6 +32,3 @@ class UsersController < ApplicationController
   end
 
 end
-  # def band_params
-  #   params.require(:band).permit(:name)
-  # end

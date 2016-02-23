@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'bootstrap-sass', '~> 3.3.6'
 
 gem 'omniauth', '~> 1.3', '>= 1.3.1'
 gem 'figaro'

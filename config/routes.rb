@@ -10,6 +10,9 @@ get 'login', to: 'sessions#new'
 post 'login', to: "sessions#create"
 delete 'logout', to: 'sessions#destroy'
 
+get '/bands/users/show/:id', to: 'users#show'
+
 resources :users
 resources :bands
+resources :bands_members
 end

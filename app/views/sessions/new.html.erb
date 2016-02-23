@@ -1,6 +1,6 @@
 <h1>Log In</h1>
 
-<%= form_for(@user, url: login_path) do |f| %>
+<%= form_for(User.new, url: login_path) do |f| %>
 <div class="email">
   <div style="width: 250px">
     <%= f.text_field :email, class: 'form-control', autofocus: true, placeholder: "Your email"%><br>

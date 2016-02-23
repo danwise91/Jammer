@@ -1,6 +1,7 @@
 <!-- <a href="/users/new">Sign up</a>
 <a href="/login">Log In</a>
 <%= link_to "Sign in with Soundcloud", soundcloud_connect_path %> -->
+
 <% if current_user %>
     <%= render :partial => 'logged_in' %>
 <% else %>
